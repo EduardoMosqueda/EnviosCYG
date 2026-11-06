@@ -1,0 +1,340 @@
+.ecyg-app {
+   --ecyg-border: #b33326;
+  --ecyg-text: #fff;
+  --ecyg-muted: #cf6949;
+  --ecyg-surface: #2f2f2f;
+  --ecyg-soft: #2c2c2c;
+  --ecyg-primary: #0f766e;
+  --ecyg-primary-dark: #115e59;
+    color: var(--ecyg-text);
+    max-width: 1040px;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+.ecyg-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 20px;
+}
+
+.ecyg-header h2 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.ecyg-header a {
+    color: var(--ecyg-primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ecyg-actions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.ecyg-action-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 132px;
+    padding: 18px;
+    border: 1px solid var(--ecyg-border);
+    border-radius: 8px;
+    background: var(--ecyg-surface);
+    color: var(--ecyg-text);
+    text-decoration: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.ecyg-action-card:hover,
+.ecyg-action-card:focus {
+    border-color: var(--ecyg-primary);
+    box-shadow: 0 10px 24px rgba(15, 35, 45, 0.1);
+    transform: translateY(-1px);
+}
+
+.ecyg-action-card strong {
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.ecyg-action-card span {
+    margin-top: 10px;
+    color: var(--ecyg-muted);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.ecyg-form {
+    display: grid;
+    gap: 18px;
+}
+
+.ecyg-panel {
+    border: 1px solid var(--ecyg-border);
+    border-radius: 8px;
+    background: var(--ecyg-surface);
+    padding: 18px;
+}
+
+.ecyg-panel h3 {
+    margin: 0 0 16px;
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.ecyg-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.ecyg-panel-heading h3 {
+    margin: 0;
+}
+
+.ecyg-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.ecyg-grid-lookup {
+    grid-template-columns: minmax(150px, 0.7fr) minmax(220px, 1fr) auto;
+    align-items: end;
+}
+
+.ecyg-span-2 {
+    grid-column: 1 / -1;
+}
+
+.ecyg-form label {
+    display: grid;
+    gap: 7px;
+    min-width: 0;
+}
+
+.ecyg-form label span {
+    font-weight: 700;
+    color: var(--ecyg-text);
+    font-size: 14px;
+}
+
+.ecyg-form input,
+.ecyg-form select,
+.ecyg-form textarea {
+    width: 95%;
+    min-height: 42px;
+    border: 1px solid var(--ecyg-border);
+    border-radius: 6px;
+    background: #000;
+    color: var(--ecyg-text);
+    font: inherit;
+    padding: 9px 11px;
+}
+
+.ecyg-form textarea {
+    min-height: 86px;
+    resize: vertical;
+}
+
+.ecyg-form input[readonly],
+.ecyg-form textarea[readonly],
+.ecyg-form select[disabled] {
+    background: var(--ecyg-soft);
+    color: #3a4652;
+}
+
+.ecyg-button,
+.ecyg-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    border: 1px solid var(--ecyg-border);
+    border-radius: 6px;
+    background: #a20000;
+    color: var(--ecyg-text);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 9px 14px;
+}
+
+.ecyg-button:hover,
+.ecyg-button:focus,
+.ecyg-icon-button:hover,
+.ecyg-icon-button:focus {
+    border-color: var(--ecyg-primary);
+    color: var(--ecyg-primary-dark);
+}
+
+.ecyg-button.primary {
+    border-color: var(--ecyg-primary);
+    background: var(--ecyg-primary);
+    color: #fff;
+}
+
+.ecyg-button.primary:hover,
+.ecyg-button.primary:focus {
+    border-color: var(--ecyg-primary-dark);
+    background: var(--ecyg-primary-dark);
+    color: #fff;
+}
+
+.ecyg-icon-button {
+    width: 42px;
+    min-width: 42px;
+    padding: 0;
+    font-size: 18px;
+}
+
+.ecyg-status {
+    min-height: 22px;
+    margin: 12px 0 0;
+    color: var(--ecyg-muted);
+    font-size: 14px;
+}
+
+.ecyg-status.is-success {
+    color: #0f766e;
+}
+
+.ecyg-status.is-warning {
+    color: #9a5b00;
+}
+
+.ecyg-status.is-error {
+    color: #b42318;
+}
+
+.ecyg-client-fields {
+    margin-top: 14px;
+}
+
+.ecyg-package-table {
+    display: grid;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.ecyg-package-row {
+    display: grid;
+    grid-template-columns: 84px minmax(240px, 1fr) 140px 120px 42px;
+    gap: 8px;
+    align-items: center;
+    min-width: 720px;
+}
+
+.ecyg-package-head {
+    color: var(--ecyg-muted);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.ecyg-package-row output {
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    border: 1px solid var(--ecyg-border);
+    border-radius: 6px;
+    background: var(--ecyg-soft);
+    padding: 9px 11px;
+    font-weight: 700;
+}
+
+.ecyg-total {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+    font-size: 17px;
+}
+
+.ecyg-total span {
+    color: var(--ecyg-muted);
+}
+
+.ecyg-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.ecyg-notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 0 0 18px;
+    border: 1px solid #b7dfd9;
+    border-radius: 8px;
+    background: #5ed2a1;
+    padding: 13px 14px;
+}
+
+.ecyg-notice.error {
+    border-color: #f0b4ac;
+    background: #490000;
+}
+
+.ecyg-notice p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .ecyg-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ecyg-grid,
+    .ecyg-grid-lookup {
+        grid-template-columns: 1fr;
+    }
+
+    .ecyg-grid-lookup .ecyg-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .ecyg-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .ecyg-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ecyg-panel {
+        padding: 14px;
+    }
+
+    .ecyg-panel-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .ecyg-notice {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .ecyg-form-actions {
+        justify-content: stretch;
+    }
+
+    .ecyg-form-actions .ecyg-button {
+        width: 100%;
+    }
+}
